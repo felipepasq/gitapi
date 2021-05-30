@@ -1,0 +1,95 @@
+
+
+.profileContainer{
+color: white;
+display: flex;
+font-family: 'Work Sans', sans-serif;
+font-weight: 400;
+
+
+.profileImage{
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.followers{
+    margin-bottom: 0;
+    margin-top: 7.5rem;
+    margin-left: 8.2rem;
+}
+.following{
+    margin-bottom: 0;
+    margin-top: 7.5rem;
+    margin-left: 5rem;
+}
+.repositories{
+    margin-bottom: 0;
+    margin-top: 7.5rem;
+    margin-left: 5rem;
+}
+
+}
+
+.wrappper{
+
+    display: flex;
+    color: white;
+    background-color: #292929;
+
+.sideContainer{
+    
+    height: 50vh;
+    margin-top: 1rem;
+    font-weight: 400;
+    
+    
+    font-family: 'Work Sans', sans-serif;
+    width: 90%;
+    
+
+.name{
+margin-bottom: 0rem;
+margin-left: 1rem;
+font-size: 1.5rem;
+}
+.email{
+margin-bottom: 0rem;
+margin-left: 1rem;
+font-size: 0.9rem;
+font-weight: 400;
+}
+.city{
+margin-bottom: 0rem;
+margin-left: 1rem;
+font-weight: 400;
+font-size: 1rem;
+}
+}
+
+.bioContainer{
+
+margin-top: 1rem;
+padding-left: 3rem;
+padding-right: 5rem;
+
+
+h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+
+}
+
+
+
+
+
+
+}
+
+
+

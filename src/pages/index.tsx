@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.scss'
 import { Button } from 'react-bootstrap'
 import Link from 'next/link';
 import React from 'react';
-
+import { api } from '../services/api'
 
 
 
@@ -33,8 +33,7 @@ export default function Home() {
 
               </Button>
             </Link>
-              console.log(login);
-            </form>
+          </form>
         </div>
       </div>
     </div>
@@ -46,16 +45,3 @@ export default function Home() {
 
 
 
-async function getContent() {
-  try {
-    const response = await fetch('https://api.github.com/users/felipepasq');
-    const data = await response.json()
-
-    console.log(data);
-  }
-  catch (error) {
-    console.error(error);
-  }
-}
-
-getContent()

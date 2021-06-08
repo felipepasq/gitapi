@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.scss'
 import { Button } from 'react-bootstrap'
 import Link from 'next/link';
 import React from 'react';
-import { api } from '../services/api'
+
 
 
 

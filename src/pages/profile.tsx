@@ -1,41 +1,41 @@
 
 import axios from 'axios'
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import { useReducer } from 'react'
-import { api } from '../services/api'
 import styles from '../styles/Profile.module.scss'
-
+import { api } from '../services/api'
+import { Header } from '../Header'
 
 interface ProfileProps {
     login: string;
     followers: number;
     following: number;
     repositories: number;
+    location: string;
+    bio: string;
 }
-
 
 export default function Profile(props: ProfileProps) {
 
-
     return (
         <div>
-            <div className={styles.profileContainer}>
-                <img className={styles.profileImage} src="/pp.jpg" alt="" />
-                <p className={styles.followers}>Seguidores{props.followers}</p>
-                <p className={styles.following}>Seguindo</p>
-                <p className={styles.repositories}>Repositórios</p>
-            </div>
+            <Header
+                login={props.login}
+                followers={props.followers}
+                following={props.following}
+                repositories={props.repositories}
+            />
+
 
             <div className={styles.wrappper}>
                 <div className={styles.sideContainer}>
-                    <p className={styles.name}>{props.login}</p>
-                    <p className={styles.email}>Email</p>
-                    <p className={styles.city}>Cidade</p>
+                    <p className={styles.name}>login</p>
+                    <p className={styles.city}>location</p>
                 </div>
 
                 <div className={styles.bioContainer}>
                     <h1>BIO</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nunc sed massa mollis venenatis. Ut dictum, metus nec imperdiet sagittis, eros tortor iaculis mi, a vehicula mi ex quis eros. Mauris lacinia orci id sapien ornare, ut vehicula nunc tincidunt. In ultricies ac ligula euismod accumsan. Donec auctor euismod neque eu laoreet. Pellentesque eu maximus risus, nec tempor nulla. Fusce ac nisi eleifend, bibendum lectus quis, facilisis massa. Nunc ex lacus, volutpat ut ante non, finibus facilisis nibh. Nulla porta, nunc nec laoreet interdum, nulla nisi ultrices est, sed blandit elit tortor sit amet elit. Nulla auctor, mi ut dignissim scelerisque, augue sapien cursus massa, et tempus lacus ante eget odio. Quisque aliquam massa ut lacus maximus condimentum. Duis semper diam et elementum gravida. In et luctus sem, viverra porttitor nibh.</p>
+
                 </div>
 
             </div>
@@ -45,9 +45,8 @@ export default function Profile(props: ProfileProps) {
 
 }
 
-
-
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+
     const response = await api.get('')
 
     return {
@@ -56,6 +55,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
             followers: response.data.followers,
             following: response.data.following,
             repositories: response.data.public_repos,
+            location: response.data.location,
+            bio: response.data.bio,
         }
     }
 

@@ -1,0 +1,57 @@
+.profileContainer{
+    color: white;
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    
+    
+    .profileImage{
+        height: 100px;
+        width: auto;
+        border-radius: 50%;
+        margin-left: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .followers{
+        font-size: 1rem;
+        margin-bottom: 0;
+        margin-top: 7.5rem;
+        margin-left: 8.2rem;
+    }
+    
+    .numberFollowers{
+    position: absolute;
+    margin-left: 18.3rem;
+    margin-top: 4.8rem;
+    font-size: 2rem;
+    }
+    
+    .numberFollowing{
+    position: absolute;
+    margin-left: 28rem;
+    margin-top: 4.8rem;
+    font-size: 2rem;
+    }
+    
+    .numberRepositories{
+        position: absolute;
+        margin-left: 37.6rem;
+        margin-top: 4.8rem;
+        font-size: 2rem;
+    }
+    
+    .following{
+        margin-bottom: 0;
+        margin-top: 7.5rem;
+        margin-left: 5rem;
+    }
+    
+    .repositories{
+        margin-bottom: 0;
+        margin-top: 7.5rem;
+        margin-left: 5rem;
+    }
+    
+    }
